@@ -1,0 +1,4 @@
+Al: Hello
+Al: Are you crazy?
+Vova: privet Alex
+Alex: privet Vova/ vse okey
