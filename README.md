@@ -5,4 +5,4 @@
 <h3 align="center">IT news writer from 🇷🇺</h3>
 
 
-[![Build Status](https://github.com/extybr/skillbox-python-basik/tree/main/.github/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/extybr/skillbox-python-basik/tree/main/.github/workflows/python-app.yml)
+[![Python application](https://github.com/extybr/skillbox-python-basik/actions/workflows/python-app.yml/badge.svg)](https://github.com/extybr/skillbox-python-basik/actions/workflows/python-app.yml)
