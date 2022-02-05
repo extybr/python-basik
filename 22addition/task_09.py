@@ -29,3 +29,4 @@ file_02.close()
 new.close()
 new_read = open('new.txt', 'r')
 for j in new_read:
+	print(j)
