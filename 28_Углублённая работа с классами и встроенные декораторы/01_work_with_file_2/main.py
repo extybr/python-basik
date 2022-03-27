@@ -1,4 +1,3 @@
-import os
 from typing import TextIO
 
 
@@ -19,9 +18,10 @@ class File:
         Функция вводит контекст среды выполнения
         :return: TextIO
         """
-        if not os.path.exists(self.name_file):
+        try:
+            self.file = open(self.name_file, self.mode, encoding='utf-8')
+        except IOError:
             self.file = open(self.name_file, 'w', encoding='utf-8')
-        self.file = open(self.name_file, self.mode, encoding='utf-8')
         return self.file
 
     def __exit__(self, exc_type, exc_value, exc_traceback) -> bool:
@@ -32,8 +32,10 @@ class File:
         :param exc_traceback:
         :return: bool
         """
+        if exc_type is IOError:
+            self.file.close()
+            return True
         self.file.close()
-        return True
 
 
 with File('text.txt', 'a') as my_file:
